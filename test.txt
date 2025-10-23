@@ -1,4 +1,44 @@
-TC 1
-Login
-1. Open broswer
-2. Click Log In button
+Test Case 1: LOGIN_TEST
+Steps:
+1. Open website (DemoBlaze in this case)
+2. Click Sign Up button
+3. Enter username and password
+4. Confirm sign-up
+5. Click Log in button
+6. Enter the same credentials and log in
+
+Expected Result:
+User successfully signs up and logs in — homepage shows username in the navigation bar.
+
+Test Case 2: LOGOUT_TEST
+Steps:
+1. Ensure the user is logged in
+2. Click Log out button
+
+Expected Result:
+User is logged out successfully — login and sign-up buttons are visible again.
+
+Test Case 3: REMOVE_FROM_CART_TEST
+Steps:
+1. Open a product page
+2. Click Add to Cart
+3. Accept alert confirming the addition
+4. Open Cart Page
+5. Click Delete button to remove the product
+
+Expected Result:
+Product is added to the cart and then successfully removed from it — cart becomes empty.
+
+Test Case 4: BUY_PRODUCT_TEST
+Steps:
+1. Open a product page
+2. Click Add to Cart
+3. Accept alert confirming the addition
+4. Open Cart Page
+5. Click Place Order button
+6. Fill in all order form fields
+7. Click Purchase button
+8. Confirm purchase success dialog
+
+Expected Result:
+Purchase is completed successfully — confirmation message appears with purchase details.

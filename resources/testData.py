@@ -1,4 +1,4 @@
-login  = 'aronTest1'
-password = '12345678'
+login  = 'testing1996d9'
+password = 'qwerty123'
 
 baseUrl = 'https://www.demoblaze.com/'
