@@ -34,13 +34,5 @@ orderFormCreditCardField = '//*[@id="card"]'
 orderFormMonthField = '//*[@id="month"]'
 orderFormYearField = '//*[@id="year"]'
 
-
-orderFormNameValue = 'John'
-orderFormCountryValue = 'New Zeland'
-orderFormCityValue = 'Wellington'
-orderFormCreditCardValue = '5130290000000009'
-orderFormMonthValue = 'November'
-orderFormYearValue = '2025'
-
 purchaseButton = '//button[contains(text(), "Purchase")]'
 purchaseSuccessButton = '//*[@class="sa-confirm-button-container"]/button'
