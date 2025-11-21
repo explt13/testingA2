@@ -95,7 +95,7 @@ Buy Product
     Sleep    2s
 
 Open Browser And Maximize
-    Open Browser    ${baseUrl}      Chrome
+    Open Browser    ${baseUrl}    browser=remote    desired_capabilities=${BROWSERSTACK_OPTIONS}
     Maximize Browser Window
 
 Close Browser Custom

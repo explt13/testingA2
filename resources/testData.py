@@ -1,6 +1,11 @@
+import random
+import string
+
 baseUrl = 'https://www.demoblaze.com/'
 
-login  = 'testing1996d18'
+random_chars = ''.join(random.choices(string.ascii_lowercase + string.digits, k=6))
+
+login  = f'testing1996_r2s1_{random_chars}'
 password = 'qwerty123'
 
 

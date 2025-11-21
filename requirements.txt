@@ -2,6 +2,9 @@ robotframework==7.3.2
 robotframework-lsp==1.13.0
 robotframework-pythonlibcore==4.4.1
 robotframework-seleniumlibrary==6.8.0
+robotframework-pabot
 selenium==4.37.0
 webdriver-manager==4.0.2
+browserstack-local
+browserstack-sdk
 

@@ -1,0 +1,20 @@
+userName: reded_GS4jgv
+accessKey: HHxsbqx5Pyq2mxNZEF8f
+framework: robot
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: 120.0
+  - os: OS X
+    osVersion: Tahoe
+    browserName: Safari
+    browserVersion: 26.0
+  - os: Windows
+    osVersion: 11
+    browserName: Firefox
+    browserVersion: latest
+parallelsPerPlatform: 1
+browserstackLocal: false
+buildName: browserstack-build-1
+projectName: BrowserStack Sample
