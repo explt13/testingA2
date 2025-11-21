@@ -2,9 +2,8 @@
 Library  SeleniumLibrary
 Variables   ./locators.py
 Variables   ./testData.py
+
 *** Keywords ***
-
-
 Sign Up
     wait until page contains element    ${signUpButton}    timeout=80      error=logInButtonNotFound
     sleep   1s
@@ -95,7 +94,9 @@ Buy Product
     Sleep    2s
 
 Open Browser And Maximize
-    Open Browser    ${baseUrl}    browser=remote    desired_capabilities=${BROWSERSTACK_OPTIONS}
+    ${caps}=    Evaluate    {}
+    Create WebDriver    Remote    command_executor=http://localhost:4444/wd/hub    desired_capabilities=${caps}
+    Go To    ${baseUrl}
     Maximize Browser Window
 
 Close Browser Custom

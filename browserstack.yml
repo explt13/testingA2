@@ -17,4 +17,4 @@ platforms:
 parallelsPerPlatform: 1
 browserstackLocal: false
 buildName: browserstack-build-1
-projectName: BrowserStack Sample
+projectName: DemoBlaze
