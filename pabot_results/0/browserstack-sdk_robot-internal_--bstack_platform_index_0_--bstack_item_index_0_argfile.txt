@@ -1,18 +1,18 @@
 --suite Test
 --variable BSTACKDEFLOCALIDENTIFIER:
---variable BSTACKPLATFORMINDEX:1
---variable CALLER_ID:0f538cc080d34579960666da267b1d8e
+--variable BSTACKPLATFORMINDEX:0
+--variable CALLER_ID:ca55a2645c294f759e9abefcfd0c4b01
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:1
+--variable PABOTEXECUTIONPOOLID:0
 --variable PABOTISLASTEXECUTIONINPOOL:0
 --variable PABOTNUMBEROFPROCESSES:3
---variable PABOTQUEUEINDEX:1
+--variable PABOTQUEUEINDEX:0
 --variable PABOTLASTLEVEL:Test.PABOT_noend
---listener /home/explt13/test/testingA2/.venv/lib/python3.12/site-packages/browserstack_sdk/bstack_robot_listener.py
+--listener /usr/local/lib/python3.12/site-packages/browserstack_sdk/bstack_robot_listener.py
 --log NONE
 --report NONE
 --xunit NONE
---outputdir ./pabot_results/1
+--outputdir ./pabot_results/0
 --consolecolors off
 --consolemarkers off
 testCases/test.robot

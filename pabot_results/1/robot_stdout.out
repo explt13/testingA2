@@ -1,10 +1,10 @@
-2025-11-21T16:49:06Z [browserstack_sdk.__init__][INFO] - SDK run started with id: fc91e82d-6f64-41d1-a309-754f886ac22a
-2025-11-21T16:49:06Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
-2025-11-21T16:49:09Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
+2025-11-21T19:16:00Z [browserstack_sdk.__init__][INFO] - SDK run started with id: 24201801-0ac2-4a02-ae09-3cbd0a0c3fc0
+2025-11-21T19:16:00Z [browserstack_sdk.__init__][INFO] - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+2025-11-21T19:16:03Z [browserstack_sdk.__init__][INFO] - Setting up for Browserstack, using framework: robot
 ==============================================================================
 Test                                                                          
 ==============================================================================
-2025-11-21T16:49:09Z [browserstack_sdk.__init__][INFO] - Completed setup!
+2025-11-21T19:16:03Z [browserstack_sdk.__init__][INFO] - Completed setup!
 LOGIN_TEST                                                            | PASS |
 ------------------------------------------------------------------------------
 LOGOUT_TEST                                                           | PASS |
@@ -16,6 +16,6 @@ REMOVE_FROM_CART_TEST                                                 | PASS |
 Test                                                                  | PASS |
 4 tests, 4 passed, 0 failed
 ==============================================================================
-Output:  /home/explt13/test/testingA2/pabot_results/2/output.xml
-2025-11-21T16:50:43Z [browserstack_sdk.__init__][INFO] - Handling session close
-2025-11-21T16:50:43Z [browserstack_sdk.__init__][INFO] - All done!
+Output:  /app/pabot_results/1/output.xml
+2025-11-21T19:17:23Z [browserstack_sdk.__init__][INFO] - Handling session close
+2025-11-21T19:17:23Z [browserstack_sdk.__init__][INFO] - All done!

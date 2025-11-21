@@ -1,0 +1,604 @@
+<robot generator="Robot 7.3.2 (Python 3.12.12 on linux)" generated="2025-11-21T19:16:03.202678" rpa="false" schemaversion="5">
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="4" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<suite name="Suites" id="s0"><suite id="s1" name="Test OS X, Tahoe, Safari, 26.0" source="/app/testCases/test.robot">
+<kw name="Open Browser And Maximize" owner="resources" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-11-21T19:16:03.312534" level="INFO">${caps} = {}</msg>
+<var>${caps}</var>
+<arg>{}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-11-21T19:16:03.311496" elapsed="0.002323" />
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:03.315794" level="INFO">Creating an instance of the Remote WebDriver.</msg>
+<msg time="2025-11-21T19:16:03.320178" level="INFO">Completed setup!</msg>
+<arg>Remote</arg>
+<arg>command_executor=http://localhost:4444/wd/hub</arg>
+<arg>desired_capabilities=${caps}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-11-21T19:16:03.314796" elapsed="4.684111" />
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:08.001218" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${baseUrl}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-21T19:16:08.000136" elapsed="1.167121" />
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T19:16:09.168510" elapsed="0.176491" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:03.308467" elapsed="6.037435" />
+</kw>
+<test id="s1-t1" name="LOGIN_TEST" line="9">
+<kw name="Sign Up" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${signUpButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:09.351415" elapsed="0.199063" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:10.553367" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:09.552376" elapsed="1.002275" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:10.557425" level="INFO">Clicking element '//*[@id="signin2"]'.</msg>
+<arg>${signUpButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:10.556509" elapsed="0.433828" />
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${signUpUsername}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:10.992288" elapsed="0.166307" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:12.161488" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:11.160466" elapsed="1.002490" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:12.165671" level="INFO">Typing text 'testing1996_r2s1_qw85xx' into text field '//*[@id="sign-username"]'.</msg>
+<arg>${signUpUsername}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:12.164795" elapsed="0.518121" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:13.186017" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:12.685049" elapsed="0.502411" />
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:13.190195" level="INFO">Typing password into text field '//*[@id="sign-password"]'.</msg>
+<msg time="2025-11-21T19:16:13.583455" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${signUpPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:13.189320" elapsed="0.657047" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:14.349263" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:13.848266" elapsed="0.502287" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:14.353581" level="INFO">Clicking element '//*[@id="signInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${signUpFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:14.352712" elapsed="0.403865" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:16.759520" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:14.758580" elapsed="2.002251" />
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:16.763444" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-11-21T19:16:16.762679" elapsed="0.506444" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:18.271931" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:17.271025" elapsed="1.002213" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:09.350427" elapsed="8.924645" />
+</kw>
+<kw name="Log in" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logInButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:18.276927" elapsed="0.157532" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:19.437263" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:18.436294" elapsed="1.002264" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:19.441248" level="INFO">Clicking element '//*[@id="login2"]'.</msg>
+<arg>${logInButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:19.440417" elapsed="0.384180" />
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${loginUsernameField}</arg>
+<arg>timeout=80</arg>
+<arg>error=logInButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:19.826521" elapsed="0.154843" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:20.984263" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:19.983363" elapsed="1.002204" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:20.988442" level="INFO">Typing text 'testing1996_r2s1_qw85xx' into text field '//*[@id="loginusername"]'.</msg>
+<arg>${loginUsernameField}</arg>
+<arg>${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:20.987526" elapsed="0.639120" />
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:21.629422" level="INFO">Typing password into text field '//*[@id="loginpassword"]'.</msg>
+<msg time="2025-11-21T19:16:21.953292" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${loginPasswordField}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:21.628546" elapsed="0.511167" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:23.142628" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:22.141719" elapsed="1.002187" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:23.146598" level="INFO">Clicking element '//*[@id="logInModal"]/div/div/div[3]/button[2]'.</msg>
+<arg>${logInFormButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:23.145760" elapsed="0.376909" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:25.525476" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:23.524541" elapsed="2.002200" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:18.275969" elapsed="7.252554" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:09.347624" elapsed="16.181681" />
+</test>
+<test id="s1-t2" name="LOGOUT_TEST" line="13">
+<kw name="Log Out" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${logOutButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=logOutButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:26.729695" elapsed="0.189020" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:31.921448" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:26.920564" elapsed="5.002166" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:31.925666" level="INFO">Clicking element '//*[@id="logout2"]'.</msg>
+<arg>${logOutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:31.924701" elapsed="0.558594" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:34.486333" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:32.485278" elapsed="2.002323" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:26.728742" elapsed="7.760801" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:26.726099" elapsed="7.764216" />
+</test>
+<test id="s1-t3" name="BUY_PRODUCT_TEST" line="16">
+<kw name="Add To Cart" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${openProductPageButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=openProductPageButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:35.407051" elapsed="0.169450" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:36.579304" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:35.578355" elapsed="1.002214" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:36.583371" level="INFO">Clicking element '//*[@id="tbodyid"]/div[3]/div/div/h4/a'.</msg>
+<arg>${openProductPageButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:36.582527" elapsed="0.398322" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:38.983719" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:36.982772" elapsed="2.002219" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:38.987740" level="INFO">Clicking element '//*[@class="btn btn-success btn-lg"]'.</msg>
+<arg>${addToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:38.986897" elapsed="0.354193" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:41.344426" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:39.343562" elapsed="2.002209" />
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:41.348467" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-11-21T19:16:41.347697" elapsed="0.578202" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:42.929992" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:41.928448" elapsed="1.003466" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:35.405931" elapsed="7.528716" />
+</kw>
+<kw name="Open Cart Page" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${cartButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=openCartPageButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:42.936890" elapsed="0.165064" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:44.106173" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:43.104583" elapsed="1.002858" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:44.110101" level="INFO">Clicking element '//*[@id="cartur"]'.</msg>
+<arg>${cartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:44.109252" elapsed="0.351134" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:46.463513" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:44.462513" elapsed="2.002270" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:42.935587" elapsed="3.531250" />
+</kw>
+<kw name="Buy Product" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${orderButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=orderButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:46.468927" elapsed="0.156538" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:46.629801" level="INFO">Clicking element '//*[@class="btn btn-success"]'.</msg>
+<arg>${orderButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:46.628777" elapsed="0.337377" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:48.968996" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:46.968019" elapsed="2.002265" />
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${orderFormModal}</arg>
+<arg>timeout=80</arg>
+<arg>error=orderFormModalNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:48.972218" elapsed="0.204578" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:50.179602" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:49.178711" elapsed="1.002165" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:50.183606" level="INFO">Typing text 'John' into text field '//*[@id="name"]'.</msg>
+<arg>${orderFormNameField}</arg>
+<arg>${orderFormNameValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:50.182722" elapsed="0.592475" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:51.028169" level="INFO">Slept 250 milliseconds.</msg>
+<arg>0.25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:50.777255" elapsed="0.252351" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:51.032510" level="INFO">Typing text 'New Zeland' into text field '//*[@id="country"]'.</msg>
+<arg>${orderFormCountryField}</arg>
+<arg>${orderFormCountryValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:51.031576" elapsed="0.546673" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:51.831139" level="INFO">Slept 250 milliseconds.</msg>
+<arg>0.25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:51.580177" elapsed="0.252213" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:51.835280" level="INFO">Typing text 'Wellington' into text field '//*[@id="city"]'.</msg>
+<arg>${orderFormCityField}</arg>
+<arg>${orderFormCityValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:51.834246" elapsed="0.546335" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:52.633409" level="INFO">Slept 250 milliseconds.</msg>
+<arg>0.25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:52.382501" elapsed="0.252191" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:52.637432" level="INFO">Typing text '5130290000000009' into text field '//*[@id="card"]'.</msg>
+<arg>${orderFormCreditCardField}</arg>
+<arg>${orderFormCreditCardValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:52.636548" elapsed="0.637764" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:53.527286" level="INFO">Slept 250 milliseconds.</msg>
+<arg>0.25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:53.276255" elapsed="0.252312" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:53.531329" level="INFO">Typing text 'November' into text field '//*[@id="month"]'.</msg>
+<arg>${orderFormMonthField}</arg>
+<arg>${orderFormMonthValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:53.530403" elapsed="0.640093" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:54.423385" level="INFO">Slept 250 milliseconds.</msg>
+<arg>0.25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:54.172415" elapsed="0.252399" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:54.427580" level="INFO">Typing text '2025' into text field '//*[@id="year"]'.</msg>
+<arg>${orderFormYearField}</arg>
+<arg>${orderFormYearValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:54.426689" elapsed="0.546674" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:55.226249" level="INFO">Slept 250 milliseconds.</msg>
+<arg>0.25s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:54.975301" elapsed="0.252264" />
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${purchaseButton}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-21T19:16:55.229557" elapsed="0.473253" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:56.705645" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:55.704734" elapsed="1.002223" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:56.709703" level="INFO">Clicking element '//button[contains(text(), "Purchase")]'.</msg>
+<arg>${purchaseButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:56.708847" elapsed="0.359696" />
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${purchaseSuccessButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=purchaseFormIsNotValid</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:16:57.070460" elapsed="0.170866" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:16:58.244252" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:57.243199" elapsed="1.002410" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:16:58.248425" level="INFO">Clicking element '//*[@class="sa-confirm-button-container"]/button'.</msg>
+<arg>${purchaseSuccessButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:16:58.247580" elapsed="0.375179" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:00.625521" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:16:58.624647" elapsed="2.002198" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:46.467804" elapsed="14.160889" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:35.403320" elapsed="25.226177" />
+</test>
+<test id="s1-t4" name="REMOVE_FROM_CART_TEST" line="21">
+<kw name="Add To Cart" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${openProductPageButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=openProductPageButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:17:01.704667" elapsed="0.201725" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:02.909303" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:01.908285" elapsed="1.002327" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:17:02.913400" level="INFO">Clicking element '//*[@id="tbodyid"]/div[3]/div/div/h4/a'.</msg>
+<arg>${openProductPageButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:17:02.912543" elapsed="0.367948" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:05.283315" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:03.282405" elapsed="2.002258" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:17:05.287553" level="INFO">Clicking element '//*[@class="btn btn-success btn-lg"]'.</msg>
+<arg>${addToCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:17:05.286649" elapsed="0.578525" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:07.868055" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:05.867059" elapsed="2.002313" />
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:17:07.871975" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>action=ACCEPT</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-11-21T19:17:07.871215" elapsed="0.482672" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:09.356933" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:08.355911" elapsed="1.002723" />
+</kw>
+<status status="PASS" start="2025-11-21T19:17:01.703704" elapsed="7.656763" />
+</kw>
+<kw name="Remove From Cart" owner="resources">
+<kw name="Open Cart Page" owner="resources">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${cartButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=openCartPageButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:17:09.363155" elapsed="0.240699" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:10.606776" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:09.605823" elapsed="1.002265" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:17:10.610833" level="INFO">Clicking element '//*[@id="cartur"]'.</msg>
+<arg>${cartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:17:10.609987" elapsed="0.385119" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:12.997923" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:10.997006" elapsed="2.002250" />
+</kw>
+<status status="PASS" start="2025-11-21T19:17:09.362339" elapsed="3.638868" />
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${removeFromCartButton}</arg>
+<arg>timeout=80</arg>
+<arg>error=removeButtonNotFound</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:17:13.002941" elapsed="0.156962" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:14.162851" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:13.161860" elapsed="1.002318" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:17:14.166877" level="INFO">Clicking element '//tbody[@id="tbodyid"]//a[text()="Delete"]'.</msg>
+<arg>${removeFromCartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T19:17:14.166037" elapsed="0.451746" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:16.620747" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:14.619701" elapsed="2.002338" />
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T19:17:16.882112" level="INFO">Current page contains element '//*[@id="tbodyid" and not (*)]'.</msg>
+<arg>${removedElement}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-11-21T19:17:16.623886" elapsed="0.259528" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T19:17:18.886208" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T19:17:16.885253" elapsed="2.002249" />
+</kw>
+<status status="PASS" start="2025-11-21T19:17:09.361342" elapsed="9.527949" />
+</kw>
+<status status="PASS" start="2025-11-21T19:17:01.701078" elapsed="17.188968" />
+</test>
+<kw name="Close Browser Custom" owner="resources" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-21T19:17:19.940158" elapsed="2.088695" />
+</kw>
+<status status="PASS" start="2025-11-21T19:17:19.935910" elapsed="2.093805" />
+</kw>
+<status status="PASS" start="2025-11-21T19:16:03.205647" elapsed="78.825738" />
+</suite>
+<status status="PASS" start="2025-11-21T19:16:03.205647" elapsed="78.825738" />
+</suite><errors>
+</errors>
+</robot>

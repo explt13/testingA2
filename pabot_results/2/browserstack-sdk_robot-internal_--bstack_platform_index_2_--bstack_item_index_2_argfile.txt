@@ -1,14 +1,14 @@
 --suite Test
 --variable BSTACKDEFLOCALIDENTIFIER:
 --variable BSTACKPLATFORMINDEX:2
---variable CALLER_ID:0c9484783eca4e05ab78b44d1d776d3e
+--variable CALLER_ID:b90c7664da7e4fd7994300494d73dc62
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:0
+--variable PABOTEXECUTIONPOOLID:2
 --variable PABOTISLASTEXECUTIONINPOOL:1
 --variable PABOTNUMBEROFPROCESSES:3
 --variable PABOTQUEUEINDEX:2
 --variable PABOTLASTLEVEL:
---listener /home/explt13/test/testingA2/.venv/lib/python3.12/site-packages/browserstack_sdk/bstack_robot_listener.py
+--listener /usr/local/lib/python3.12/site-packages/browserstack_sdk/bstack_robot_listener.py
 --log NONE
 --report NONE
 --xunit NONE

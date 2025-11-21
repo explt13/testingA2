@@ -1,0 +1,22 @@
+services:
+  robot-tests:
+    build: .
+    container_name: robot-framework-browserstack
+    environment:
+      BROWSERSTACK_USERNAME: ${BROWSERSTACK_USERNAME}
+      BROWSERSTACK_ACCESS_KEY: ${BROWSERSTACK_ACCESS_KEY}
+    volumes:
+      - .:/app
+
+  jenkins:
+    image: jenkins/jenkins
+    container_name: jenkins
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  jenkins_home:
