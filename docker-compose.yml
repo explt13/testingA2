@@ -1,15 +1,8 @@
 services:
-  robot-tests:
-    build: .
-    container_name: robot-framework-browserstack
-    environment:
-      BROWSERSTACK_USERNAME: ${BROWSERSTACK_USERNAME}
-      BROWSERSTACK_ACCESS_KEY: ${BROWSERSTACK_ACCESS_KEY}
-    volumes:
-      - .:/app
-
   jenkins:
     image: jenkins/jenkins
+    build: .
+    privileged: true
     container_name: jenkins
     ports:
       - "8080:8080"
