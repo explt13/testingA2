@@ -1,5 +1,5 @@
-userName: reded_GS4jgv
-accessKey: HHxsbqx5Pyq2mxNZEF8f
+userName: jimmymckay_gvrkKQ
+accessKey: 6Bm1P7cbdYc6rDTRUs8i
 framework: robot
 platforms:
   - os: Windows
@@ -16,5 +16,5 @@ platforms:
     browserVersion: latest
 parallelsPerPlatform: 1
 browserstackLocal: false
-buildName: browserstack-build-1
+buildName: browserstack-build-2
 projectName: DemoBlaze
